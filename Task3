@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите первую кооридинату");
+        Scanner str = new Scanner(System.in);
+        int x = str.nextInt();
+
+        System.out.println("Введите вторую кооридинату");
+        str = new Scanner(System.in);
+        int y = str.nextInt();
+
+        if ((x+y)%2 == 0) System.out.println("Клетка черная"); else System.out.println("Клетка белая");
+        if ((x>4) && (y<=4)) System.out.println("Клетка на I координатной плоскости");
+        if ((x<=4) && (y<=4)) System.out.println("Клетка на II координатной плоскости");
+        if ((x<=4) && (y>4)) System.out.println("Клетка на III координатной плоскости");
+        if ((x>4) && (y>4)) System.out.println("Клетка на IV координатной плоскости");
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите число");
+        Scanner str = new Scanner(System.in);
+        int num = str.nextInt();
+
+        if (num >= 0) System.out.println("Число положительное"); else System.out.println("Число отрицательное");
+        if (num % 2 == 0) System.out.println("Число четное"); else System.out.println("Число нечетное");
+        if (num % 11 == 0 && num != 0) System.out.println("Число нацело делится на 11"); else System.out.println("Число нацело не делится на 11");
+        if (num % 13 == 0 && num != 0) System.out.println("Число нацело делится на 13"); else System.out.println("Число нацело не делится на 13");
+        if (Math.sqrt(num) % 1 == 0) System.out.println("Число является корнем"); else System.out.println("Число не является корнем");
+        if (num*num <= 100) System.out.println("Квадрат числа не превышает 100"); else System.out.println("Квадрат числа превышает 100");
+    }
+}

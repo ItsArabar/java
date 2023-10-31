@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите строку");
+        Scanner str = new Scanner(System.in);
+        String text = str.nextLine();
+
+        int upper = 0;
+        int lower = 0;
+        int num = 0;
+        int punct = 0;
+
+        for (char ch : text.toCharArray()){
+            if (Character.isUpperCase(ch)){
+                upper++;
+            } else if (Character.isLowerCase(ch)) {
+                lower++;
+            } else if (Character.isDigit(ch)) {
+                num++;
+            }
+
+        }
+        Matcher matcher = Pattern.compile("[.,;!?'\"]").matcher(text);
+        while (matcher.find()) {
+            punct++;
+        }
+
+        System.out.println("Количество заглавных букв: "+upper);
+        System.out.println("Количество строчных букв: "+lower);
+        System.out.println("Количество цифр: "+num);
+        System.out.println("Количество знаков препинания: "+punct);
+    }
+}
